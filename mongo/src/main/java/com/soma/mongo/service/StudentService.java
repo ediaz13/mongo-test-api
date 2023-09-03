@@ -1,0 +1,18 @@
+package com.soma.mongo.service;
+
+import com.soma.mongo.model.Student;
+import com.soma.mongo.repository.StudentRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@AllArgsConstructor
+@Service
+public class StudentService {
+
+    private final StudentRepository studentRepository;
+    public List<Student> getAllStudents() {
+        return studentRepository.findAll();
+    }
+}
